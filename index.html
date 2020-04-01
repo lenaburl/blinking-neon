@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Blinking neon</title>
+  <style>
+    body,
+    html {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: black;
+    }
+    .word {
+      color: #33ff00;
+      text-transform: uppercase;
+      font-family: 'Arial', cursive;
+      font-size: 15vh;
+      letter-spacing: 0.5vh;
+      text-shadow: 1px 0 4px #33cc00, 2px 0 4px #33cc00, 3px 0 4px #33cc00, 2px 0 3px #33ff00, 2px 3px 15px #33ff00, 2px 0 15px, 5px 0 125px, 20px 0 200px #33ff00,40px 0 200px #33ff00;
+      animation: blinking 5s linear infinite;
+    }
+    .word span:first-child {
+      animation: blinking 3s linear infinite;
+    }
+    .word span:last-child {
+      animation: blinking 1s linear infinite;
+    }
+
+    @keyframes blinking {
+      0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+        opacity: .99;
+
+      }
+      20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+        opacity: 0.4;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="word">e<span>x</span>i<span>t</span></div>
+</body>
+</html>
